@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hawk Studio - Transforming Ideas into Digital Solutions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home"><img src="logo.png" alt="Hawk Studio Logo" class="nav-logo-img" /></a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary quote-btn" onclick="openQuoteModal()">Request a Quote</button>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile nav overlay and slide-in menu -->
+    <div id="nav-overlay" class="nav-overlay" aria-hidden="true"></div>
+    <aside id="nav-menu-mobile" class="nav-menu-mobile" aria-hidden="true">
+        <ul class="nav-menu-mobile-list">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><button class="btn btn-primary quote-btn" onclick="openQuoteModal()">Request a Quote</button></li>
+        </ul>
+    </aside>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-animation"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-in">Hawk Studio</h1>
+            <p class="hero-tagline animate-fade-in-delay">Transforming Ideas into Digital Solutions</p>
+            <p class="hero-description animate-fade-in-delay-2">We empower small to medium businesses with cutting-edge website development, innovative graphic design, and comprehensive IT solutions tailored to your unique needs.</p>
+            <button class="btn btn-primary btn-large animate-fade-in-delay-3" onclick="openQuoteModal()">Get Started Today</button>
+        </div>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Website Development</h3>
+                    <p>From responsive websites to complex web applications, we create digital experiences that engage your audience.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Stand out with stunning visual identity and compelling brand designs that leave lasting impressions.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>IT Services</h3>
+                    <p>Keep your business running smoothly with comprehensive IT support and cybersecurity solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Choose Hawk Studio</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Expert Team</h4>
+                    <p>Skilled professionals with years of industry experience</p>
+                </div>
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4>Custom Solutions</h4>
+                    <p>Tailored services designed for your specific business needs</p>
+                </div>
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>Timely Delivery</h4>
+                    <p>We respect deadlines and deliver projects on time</p>
+                </div>
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">
+                        <i class="fas fa-support"></i>
+                    </div>
+                    <h4>Ongoing Support</h4>
+                    <p>Continued assistance even after project completion</p>
+                </div>
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h4>Competitive Pricing</h4>
+                    <p>Quality services at rates that fit your budget</p>
+                </div>
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Client-Focused</h4>
+                    <p>Your success is our priority</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number" data-target="98">0</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Hawk Studio</h2>
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <h3>Our Mission</h3>
+                    <p>To empower businesses with innovative digital solutions that drive growth, efficiency, and success in today's competitive landscape.</p>
+                    
+                    <h3>Our Vision</h3>
+                    <p>To be the leading provider of comprehensive digital solutions for small and medium businesses, known for our expertise, reliability, and commitment to client success.</p>
+                    
+                    <h3>Our Story</h3>
+                    <p>Founded with a passion for technology and a commitment to excellence, Ansum Solutions has grown from a small startup to a trusted partner for businesses seeking digital transformation. Our journey began with a simple belief: every business deserves access to world-class digital solutions.</p>
+                </div>
+                <div class="about-values animate-on-scroll">
+                    <h3>Our Values</h3>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <i class="fas fa-star"></i>
+                            <h4>Excellence</h4>
+                            <p>We strive for perfection in every project</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Integrity</h4>
+                            <p>Honest and transparent in all our dealings</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Innovation</h4>
+                            <p>Embracing new technologies and creative solutions</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-users-cog"></i>
+                            <h4>Collaboration</h4>
+                            <p>Working together to achieve shared goals</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team Section -->
+            <div class="team-section">
+                <h3 class="subsection-title">Meet Our Team</h3>
+                <div class="team-grid">
+                    <div class="team-member animate-on-scroll">
+                        <div class="member-photo">
+                            <div class="placeholder-image">AS</div>
+                        </div>
+                        <h4>Ankit Sharma</h4>
+                        <p class="member-role">CEO &amp; Founder</p>
+                        <p>Visionary leader with expertise in tech industry</p>
+                    </div>
+                    <div class="team-member animate-on-scroll">
+                        <div class="member-photo">
+                            <div class="placeholder-image">SS</div>
+                        </div>
+                        <h4>Sudhanshu Sharma</h4>
+                        <p class="member-role">Lead Developer</p>
+                        <p>Full-stack expert specializing in modern web technologies</p>
+                    </div>
+                    <div class="team-member animate-on-scroll">
+                        <div class="member-photo">
+                            <div class="placeholder-image">SS</div>
+                        </div>
+                        <h4>SumantSharma</h4>
+                        <p class="member-role">Design Director</p>
+                        <p>Professional Designer with creative excellence</p>
+                    </div>
+                    <div class="team-member animate-on-scroll">
+                        <div class="member-photo">
+                            <div class="placeholder-image">SS</div>
+                        </div>
+                        <h4>Akash Gadariya</h4>
+                        <p class="member-role">Designer</p>
+                        <p>Designer with creative excellence</p>
+                    </div>
+                    <div class="team-member animate-on-scroll">
+                        <div class="member-photo">
+                            <div class="placeholder-image">A</div>
+                        </div>
+                        <h4>Aman  </h4>
+                        <p class="member-role">IT Solutions Manager</p>
+                        <p>Certified professional in network and cybersecurity</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Detailed Section -->
+    <section id="services" class="services-detailed">
+        <div class="container">
+            <h2 class="section-title">Our Services in Detail</h2>
+            
+            <div class="service-detail animate-on-scroll">
+                <div class="service-detail-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="service-detail-content">
+                    <h3>Website Development</h3>
+                    <p>From responsive websites to complex web applications, we create digital experiences that engage your audience and drive results. Our services include custom web design, e-commerce solutions, CMS development, and ongoing maintenance.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Responsive Design</span>
+                        <span class="feature-tag">E-commerce Solutions</span>
+                        <span class="feature-tag">CMS Integration</span>
+                        <span class="feature-tag">Performance Optimization</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="openQuoteModal()">Get Started</button>
+                </div>
+            </div>
+            
+            <div class="service-detail animate-on-scroll">
+                <div class="service-detail-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <div class="service-detail-content">
+                    <h3>Graphic Design</h3>
+                    <p>Stand out with stunning visual identity. We craft compelling brand designs, marketing materials, and user interfaces that communicate your message effectively and leave lasting impressions.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Brand Identity &amp; Logos</span>
+                        <span class="feature-tag">Marketing Collateral</span>
+                        <span class="feature-tag">UI/UX Design</span>
+                        <span class="feature-tag">Print &amp; Digital Design</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="openQuoteModal()">Get Started</button>
+                </div>
+            </div>
+            
+            <div class="service-detail animate-on-scroll">
+                <div class="service-detail-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <div class="service-detail-content">
+                    <h3>IT Services</h3>
+                    <p>Keep your business running smoothly with our comprehensive IT support. We provide network setup, cybersecurity solutions, cloud services, and technical support to ensure your technology works for you.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">IT Support &amp; Maintenance</span>
+                        <span class="feature-tag">Network Setup &amp; Security</span>
+                        <span class="feature-tag">Cloud Solutions</span>
+                        <span class="feature-tag">Cybersecurity Services</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="openQuoteModal()">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Our Portfolio</h2>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="website">Websites</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="it">IT Solutions</button>
+            </div>
+            <div class="portfolio-grid" id="portfolio-grid">
+                <!-- Portfolio items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-form-container animate-on-scroll">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                                <span class="error-message" id="name-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message" id="email-error"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                                <span class="error-message" id="phone-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interest</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service...</option>
+                                <option value="website">Website Development</option>
+                                <option value="design">Graphic Design</option>
+                                <option value="it">IT Services</option>
+                                <option value="all">All Services</option>
+                            </select>
+                            <span class="error-message" id="service-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full-width">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info animate-on-scroll">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@ansumsolutions.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91-XXXXXXXXXX</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Business Park<br>Sector 18, Delhi, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday<br>9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Ansum Solutions</h3>
+                    <p>Transforming Ideas into Digital Solutions. We empower businesses with cutting-edge technology and innovative design.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> info@ansumsolutions.com</p>
+                    <p><i class="fas fa-phone"></i> +91-XXXXXXXXXX</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Delhi, India</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="footer-social">
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ansum Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quote Modal -->
+    <div id="quote-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="quote-modal-title"><i class="fa-solid fa-rocket"></i> Request a Demo</h3>
+                <button type="button" class="close" aria-label="Close demo form" id="quote-close">&times;</button>
+            </div>
+            <form class="demo-form-redesign" id="quote-form" novalidate autocomplete="off">
+                <div class="form-group">
+                    <label for="quote-name"><i class="fa-solid fa-user"></i> Full Name</label>
+                    <input type="text" id="quote-name" name="name" required placeholder="Your Name" autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="quote-email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+                    <input type="email" id="quote-email" name="email" required placeholder="you@email.com" autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="quote-phone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+                    <input type="tel" id="quote-phone" name="phone" placeholder="Optional" autocomplete="tel">
+                </div>
+                <div class="form-group">
+                    <label for="quote-service"><i class="fa-solid fa-list-check"></i> Service Required</label>
+                    <select id="quote-service" name="service" required>
+                        <option value="">Select a service...</option>
+                        <option value="website">Website Development</option>
+                        <option value="design">Graphic Design</option>
+                        <option value="it">IT Services</option>
+                        <option value="all">Multiple Services</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quote-budget"><i class="fa-solid fa-indian-rupee-sign"></i> Budget Range</label>
+                    <select id="quote-budget" name="budget">
+                        <option value="">Select budget range...</option>
+                        <option value="under-50k">Under ₹50,000</option>
+                        <option value="50k-1l">₹50,000 - ₹1,00,000</option>
+                        <option value="1l-2l">₹1,00,000 - ₹2,00,000</option>
+                        <option value="above-2l">Above ₹2,00,000</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quote-message"><i class="fa-solid fa-comment-dots"></i> Project Details</label>
+                    <textarea id="quote-message" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full-width"><i class="fa-solid fa-paper-plane"></i> Submit Demo Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolio-modal" class="modal">
+        <div class="modal-content portfolio-modal-content">
+            <div class="modal-header">
+                <h3 id="portfolio-modal-title"></h3>
+                <span class="close" onclick="closePortfolioModal()">&times;</span>
+            </div>
+            <div class="portfolio-modal-body">
+                <div class="portfolio-modal-image">
+                    <div id="portfolio-modal-img"></div>
+                </div>
+                <div class="portfolio-modal-details">
+                    <p id="portfolio-modal-category"></p>
+                    <p id="portfolio-modal-description"></p>
+                    <button class="btn btn-primary" onclick="openQuoteModal()">Start Similar Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="success-message" class="success-toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="success-text">Message sent successfully!</span>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+  (function () {
+    const form = document.getElementById('quote-form');
+    const closeBtn = document.getElementById('quote-close');
+    const modal = document.getElementById('quote-modal');
+
+    // Optional: a small success banner inside the modal
+    const successEl = document.createElement('p');
+    successEl.id = 'quote-success';
+    successEl.style.display = 'none';
+    successEl.setAttribute('role', 'status');
+    successEl.textContent = 'Thanks! We’ll get back to you shortly.';
+    form.parentNode.insertBefore(successEl, form);
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnHtml = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+      // Build payload from your form fields
+      const payload = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        phone: form.phone.value.trim(),
+        service: form.service.value,
+        budget: form.budget.value,
+        message: form.message.value.trim(),
+        // handy extras (optional)
+        page: location.href
+      };
+
+      try {
+        const res = await fetch('https://script.google.com/macros/s/AKfycbyKfjbSri-gzywnzRn6mrgTM9uiIvpusiLn3asqjydQIizmNXvwzTy1ofdHU9KBTv-_9w/exec', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          mode: 'cors' // Apps Script web apps accept CORS by default
+        });
+
+        const json = await res.json().catch(() => ({}));
+        if (res.ok && json.ok) {
+          form.reset();
+          successEl.style.display = 'block';
+          successEl.className = 'alert alert-success'; // if you have styles
+          // close the modal after a moment (optional)
+          setTimeout(() => {
+            successEl.style.display = 'none';
+            if (closeBtn) closeBtn.click();
+          }, 1800);
+        } else {
+          throw new Error(json.error || 'Failed to submit. Please try again.');
+        }
+      } catch (err) {
+        alert(err.message || 'Network error. Please try again.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHtml;
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
